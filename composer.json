@@ -1,8 +1,18 @@
 {
-	"require": {
-
-	},
-	"autoload": {
-        "psr-4": {"TotusPKI\\": "TotusPKI/"}
-    }
+    "name": "robinsongarciax/totus-pki",
+    "description": "Esta libreria te permite trabajar con un certificado pki y si este corresponde con su repectiva clave privada",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "TotusPKI\\": "TotusPKI/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Robinson Garcia",
+            "email": "rgarciameldz@gmail.com"
+        }
+    ],
+    "require": {}
 }
