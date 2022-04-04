@@ -6,7 +6,7 @@ abstract class ElementoPKI implements IElementoPKI {
 	protected $name;
 	protected $data;
 
-	public function __construct(string $name, string $data) {
+	public function __construct($name, $data) {
 		$this->name = $name;
 		$data = @is_file($data) ? file_get_contents($data) : $data;
 		

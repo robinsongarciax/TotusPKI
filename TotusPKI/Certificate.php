@@ -8,7 +8,12 @@ class Certificate {
 	private $encriptedPrivateKey;
 	private $privateKey;	
 
-	public function __construct(string $cer, string $key = null, string $password = null) {
+	/**
+	 * @param string|stream $cer path to the cer file or the read data of the file
+	 * @param string|stream $key path to the key file or the read data of the file
+	 * @param string $password passphrase must be used to the specified key is encrypted
+	 */
+	public function __construct($cer, $key = null, string $password = null) {
 		$this->publicKey = new PublicKey($cer);
 		if (isset($key)) {
 			$this->encriptedPrivateKey = new EncriptedPrivateKey($key, $password);
